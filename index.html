@@ -16,18 +16,33 @@
 
   <body>
     <!-- Navigation -->
-    <header class="header">
-      <nav class="navbar">
-        <a href="index.html#home" class="logo">ATELIER.</a>
 
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">Our Story</a></li>
+    <header class="header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a href="index.html#home" class="logo"> ATELIER<span>.</span> </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="primary-navigation">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">Our Story</a></li>
           <li><a href="menu.html">Menu</a></li>
-          <li><a href="#contact">Visit Us</a></li>
+          <li><a href="visit.html">Visit Us</a></li>
         </ul>
 
-        <a href="menu.html" class="nav-button">Explore Menu</a>
+        <a href="menu.html" class="nav-button">
+          Explore Menu <span aria-hidden="true">↗</span>
+        </a>
       </nav>
     </header>
 
