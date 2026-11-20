@@ -48,3 +48,43 @@ if (menuToggle && navLinks) {
     }
   });
 }
+
+// ==========================================
+// INTERACTIVE MENU FILTERS
+// ==========================================
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+const menuCategories = document.querySelectorAll(".menu-category-block");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const selectedCategory = button.dataset.filter;
+
+    // Update the active button
+    filterButtons.forEach((filterButton) => {
+      const isActive = filterButton === button;
+
+      filterButton.classList.toggle("active", isActive);
+      filterButton.setAttribute("aria-pressed", String(isActive));
+    });
+
+    // Show only matching menu categories
+    menuCategories.forEach((category) => {
+      const categoryName = category.dataset.category;
+
+      const shouldShow =
+        selectedCategory === "all" || selectedCategory === categoryName;
+
+      category.hidden = !shouldShow;
+    });
+  });
+});
+
+// Initialize accessibility state
+filterButtons.forEach((button) => {
+  button.setAttribute(
+    "aria-pressed",
+    String(button.classList.contains("active")),
+  );
+});

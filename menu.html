@@ -53,6 +53,75 @@
         </div>
       </section>
 
+      <!-- Featured favourites -->
+      <section class="featured-menu">
+        <div class="featured-heading">
+          <div>
+            <p class="eyebrow">THE ATELIER EDIT</p>
+            <h2>A few favourites.</h2>
+          </div>
+
+          <p>
+            The little things we keep coming back to. Crafted with care, served
+            with warmth.
+          </p>
+        </div>
+
+        <div class="featured-grid">
+          <article class="featured-card">
+            <img
+              src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=900"
+              alt="Iced coffee in a glass"
+              loading="lazy"
+            />
+
+            <div class="featured-info">
+              <h3>Cold Brew</h3>
+              <span>₹220</span>
+            </div>
+          </article>
+
+          <article class="featured-card">
+            <img
+              src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=900"
+              alt="Golden butter croissant"
+              loading="lazy"
+            />
+
+            <div class="featured-info">
+              <h3>Butter Croissant</h3>
+              <span>₹160</span>
+            </div>
+          </article>
+
+          <article class="featured-card">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900"
+              alt="Freshly prepared coffee"
+              loading="lazy"
+            />
+
+            <div class="featured-info">
+              <h3>Signature Coffee</h3>
+              <span>From ₹140</span>
+            </div>
+          </article>
+
+          <article class="featured-card">
+            <img
+              src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=900"
+              alt="Freshly prepared brunch dish"
+              loading="lazy"
+            />
+
+            <div class="featured-info">
+              <h3>Brunch Favourites</h3>
+              <span>From ₹320</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="menu-list" id="menu-list" aria-label="Cafe menu">
         <div class="menu-list-heading">
           <p class="eyebrow">SERVED DAILY</p>
@@ -62,8 +131,39 @@
           </p>
         </div>
 
+        <!-- Interactive category filters -->
+        <div
+          class="menu-filters"
+          role="group"
+          aria-label="Filter menu categories"
+        >
+          <button class="filter-btn active" data-filter="all" type="button">
+            All Items
+          </button>
+
+          <button class="filter-btn" data-filter="coffee" type="button">
+            Coffee
+          </button>
+
+          <button class="filter-btn" data-filter="cold" type="button">
+            Cold Drinks
+          </button>
+
+          <button class="filter-btn" data-filter="tea" type="button">
+            Tea & More
+          </button>
+
+          <button class="filter-btn" data-filter="bakery" type="button">
+            Bakery & Brunch
+          </button>
+        </div>
+
         <div class="menu-categories">
-          <section class="menu-category-block" aria-labelledby="coffee-heading">
+          <section
+            class="menu-category-block"
+            data-category="coffee"
+            aria-labelledby="coffee-heading"
+          >
             <div class="menu-category-title">
               <p class="eyebrow">FROM THE ESPRESSO BAR</p>
               <h2 id="coffee-heading">Coffee, slowly</h2>
@@ -107,7 +207,11 @@
             </div>
           </section>
 
-          <section class="menu-category-block" aria-labelledby="cool-heading">
+          <section
+            class="menu-category-block"
+            data-category="cold"
+            aria-labelledby="cool-heading"
+          >
             <div class="menu-category-title">
               <p class="eyebrow">OVER ICE</p>
               <h2 id="cool-heading">Cool & refreshing</h2>
@@ -151,7 +255,11 @@
             </div>
           </section>
 
-          <section class="menu-category-block" aria-labelledby="tea-heading">
+          <section
+            class="menu-category-block"
+            data-category="tea"
+            aria-labelledby="tea-heading"
+          >
             <div class="menu-category-title">
               <p class="eyebrow">A MOMENT TO UNWIND</p>
               <h2 id="tea-heading">Tea & more</h2>
@@ -195,7 +303,11 @@
             </div>
           </section>
 
-          <section class="menu-category-block" aria-labelledby="bakery-heading">
+          <section
+            class="menu-category-block"
+            data-category="bakery"
+            aria-labelledby="bakery-heading"
+          >
             <div class="menu-category-title">
               <p class="eyebrow">FRESH FROM OUR KITCHEN</p>
               <h2 id="bakery-heading">Bakery & brunch</h2>
